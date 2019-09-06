@@ -68,7 +68,19 @@ def check_existing_credentials(email):
     return Credentials.credentials_exists(email)
 
 
+def display_users():
+    '''
+    Function that returns all the saved users
+    '''
+    return User.display_users()
 
+def display_credential():
+    '''
+    Function that returns all the saved credential
+    '''
+    return Credentials.display_credential()
+
+    
 
 
 
