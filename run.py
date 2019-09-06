@@ -16,17 +16,17 @@ def create_credentials(accountName,siteName,username,email,password):
     return new_credentials
 
 
-# def save_users(user):
-#     '''
-#     Function to save user
-#     '''
-#     user.save_user()
+def save_users(user):
+    '''
+    Function to save user
+    '''
+    user.save_user()
 
-# def save_credential(credentials):
-#     '''
-#     Function to save credentials
-#     '''
-#     credentials.save_credentials()
+def save_credential(credentials):
+    '''
+    Function to save credentials
+    '''
+    credentials.save_credentials()
 
 
 
