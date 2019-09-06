@@ -84,7 +84,7 @@ class TestCredentials(unittest.TestCase):
             method that retuns a list of all credential saved
             '''
             self.assertEqual(Credentials.display_credential(),Credentials.Credentials_list)
-
+            
 
 
 if __name__ == '__main__':
