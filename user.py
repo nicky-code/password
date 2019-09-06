@@ -44,5 +44,21 @@ class User:
             if user.email == email:
                 return user
 
+    @classmethod
+    def user_exists(cls,email):
+        '''
+        Method that checks if an user exists from the user list.
+        Args:
+            email: email address to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.email == email:
+                return True
+
+        return False
+
+
     
        

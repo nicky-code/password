@@ -46,6 +46,22 @@ class Credentials:
             if credentials.email == email:
                 return credentials
 
+    @classmethod
+    def credentials_exists(cls,email):
+        '''
+        Method that checks if the credentials exist from the Credentials list.
+        Args:
+            email: email address to search if it exists
+        Returns :
+            Boolean: True or false depending if the credentials exist
+        '''
+        for credentials in cls.Credentials_list:
+            if credentials.email == email:
+                return True
+
+        return False
+        
+
 
     
    

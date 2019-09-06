@@ -52,6 +52,10 @@ class TestCredentials(unittest.TestCase):
         test_credentials = Credentials("Jessica","Instagram","Jessy","jessy7@gmail.com","great7") #new credentilas
         test_credentials.save_credentials()
 
+        credentials_exists = Credentials.credentials_exists("jessy7@gmail.com")
+
+        self.assertTrue(credentials_exists)
+
         found_credentials = Credentials.find_by_email("jessy7@gmail.com")
 
         self.assertEqual(found_credentials.username,test_credentials.username)
@@ -70,6 +74,10 @@ class TestCredentials(unittest.TestCase):
             test to check if we can find the credentials by email and display information
             '''
 
+    def test_credentials_exists(self):
+            '''
+            test to check if we can return a Boolean if we cannot find the credentials.
+            '''
 
 
 
