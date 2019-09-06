@@ -42,6 +42,19 @@ def del_credentials(credentials):
     credentials.delete_credentials()
 
 
+def find_user(email):
+    '''
+    Function that finds an user by email and returns the user
+    '''
+    return User.find_by_email(email)
+
+def find_credentials(email):
+    '''
+    Function that finds the credentials by email and returns the credentials
+    '''
+    return Credentials.find_by_email(email)
+
+
 
 
 
