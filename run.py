@@ -55,6 +55,19 @@ def find_credentials(email):
     return Credentials.find_by_email(email)
 
 
+def check_existing_users(email):
+    '''
+    Function that check if an user exists with that email and return a Boolean
+    '''
+    return User.user_exists(email)
+
+def check_existing_credentials(email):
+    '''
+    Function that check if the credentials exist with that email and return a Boolean
+    '''
+    return Credentials.credentials_exists(email)
+
+
 
 
 
