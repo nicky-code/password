@@ -2,18 +2,20 @@ class Credentials:
     """
     Class that generates new instances of credentials
     """
+
+    Credentials_list = []
+
+    def _init_(self,accountName,siteName,username,email,password):
+
+      #docstring removed for simplicity
     
+        self.accountName = accountName
+        self.siteName = siteName
+        self.username = username
+        self.email = email
+        self.password = password
+
+
     
-def _init_(self,accountName,siteName,username,email,password):
-    
-    '''
-    _init_ method that helps define properties for our objects.
-    
-    Args:
-        accountName: New user accountName.
-        siteName: New user siteName you want to use.
-        username: New user username.
-        email: New user email address.
-        password: New user password.
-    '''
+   
        
