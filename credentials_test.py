@@ -79,6 +79,11 @@ class TestCredentials(unittest.TestCase):
             test to check if we can return a Boolean if we cannot find the credentials.
             '''
 
+    def test_display_credential(self):
+            '''
+            method that retuns a list of all credential saved
+            '''
+            self.assertEqual(Credentials.display_credential(),Credentials.Credentials_list)
 
 
 
