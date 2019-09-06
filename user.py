@@ -28,6 +28,21 @@ class User:
         '''
 
         User.user_list.remove(self)
-    
+
+    @classmethod
+    def find_by_email(cls,email):
+        '''
+        Method that takes in an email and returns an user that matches that email.
+
+        Args:
+            email: email address to search for 
+        Returns:
+            User of person that matches the email.
+        '''
+
+        for user in cls.user_list:
+            if user.email == email:
+                return user
+
     
        

@@ -49,6 +49,11 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Aline","nickoline@yahoo.fr","santa7") # new user
         test_user.save_user()
+
+        found_user = User.find_by_email("nickoline@yahoo.fr")
+
+        self.assertEqual(found_user.username,test_user.username)
+
         self.new_user.delete_user() #deleting an user object 
         self.assertEqual(len(User.user_list),1)
 
@@ -57,6 +62,13 @@ class TestUser(unittest.TestCase):
             '''
             test_delete_user to test if we can remove an user from our user list
             '''
+
+    def test_find_user_by_email(self):
+            '''
+            test to check if we can find the user by email and display information
+            '''
+
+
             
     
 

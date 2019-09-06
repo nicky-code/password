@@ -51,6 +51,11 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials()
         test_credentials = Credentials("Jessica","Instagram","Jessy","jessy7@gmail.com","great7") #new credentilas
         test_credentials.save_credentials()
+
+        found_credentials = Credentials.find_by_email("jessy7@gmail.com")
+
+        self.assertEqual(found_credentials.username,test_credentials.username)
+
         self.new_credentials.delete_credentials() #deleting credentials object 
         self.assertEqual(len(Credentials.Credentials_list),1)
 
@@ -59,6 +64,13 @@ class TestCredentials(unittest.TestCase):
             '''
             test_delete_credentials to test if we can remove an credentials from our Credentials list
             '''
+
+    def test_find_credentials_by_email(self):
+            '''
+            test to check if we can find the credentials by email and display information
+            '''
+
+
 
 
 
