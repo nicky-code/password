@@ -5,7 +5,7 @@ class Credentials:
 
     Credentials_list = []
 
-    def _init_(self,accountName,siteName,username,email,password):
+    def __init__(self,accountName,siteName,username,email,password):
 
       #docstring removed for simplicity
     
@@ -14,6 +14,14 @@ class Credentials:
         self.username = username
         self.email = email
         self.password = password
+
+    def save_credentials(self):
+
+        '''
+        save_credentials method saves credentials objects into Credentials_list
+        '''
+
+        Credentials.Credentials_list.append(self)
 
 
     
