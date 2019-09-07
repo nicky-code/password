@@ -1,5 +1,8 @@
+#!/usr/bin/env python3.6
 from user import User
 from credentials import Credentials
+import random
+import string
 
 def create_user(username,email,password):
     '''
@@ -80,7 +83,93 @@ def display_credential():
     '''
     return Credentials.display_credential()
 
-    
+def randomString(stringLength):
+    """Generate a random string with the combination of lowercase and uppercase letters """
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(stringLength))
 
+def main():
+    
+    print("Welcome to Password Locker Application! what is your name?")
+    user_name = input()
+    print(f"Hello {user_name}. what would you like to do?")
+    print('\n')
+    while True:
+        print("Use these short codes: ct -create a new user account, ad - add the credentials , dy - display credentials, dl - delete credentials, ex - exit the password locker")
+                        
+        short_code = input().lower()
+                        
+        if short_code == 'ct':
+            
+            
+            print("New User")
+            print("-"*10)
+                            
+            print("username ....")
+            user_name = input()
+                            
+            print("email ...")
+            e_mail = input()
+                            
+            print("password ...")
+            password = input()
+                            
+            save_users(create_user(user_name,e_mail,password)) #create and save new user.
+            print('\n')
+            print(f"New User {user_name} {e_mail} created and saved")
+            print('\n')
+                            
+        elif short_code == 'ad':
+            print("New Credentials")
+            print("-"*10)
+                            
+            print("accountName ...")
+            account_Name = input()
+                            
+            print("siteName ...")
+            site_Name = input()
+                            
+            print("username ...")
+            user_name = input()
+                            
+            print("email ...")
+            e_mail = input()
+                            
+            # print("password ...")
+            
+            print("use this short_code: gn - if you want system to generate password for you, or use cc - to create your own password")
+            # password = input()
+            choice = input().lower()
+            if choice == 'gn':
+                print("Random password generated for you")
+                print ("First Random String is ", randomString(8) )
+                print ("second Random String is ", randomString(8) )
+
+                save_credential(create_credentials(account_Name,site_Name,user_name,e_mail,password)) #create and save new credentials.
+                print('\n')
+                print(f"New Credentials {account_Name} {site_Name} {user_name} {e_mail} created and saved")
+                print('\n')
+            
+            
+        
+                            
+            else :
+                new_password = input()
+                save_credential(create_credentials(account_Name,site_Name,user_name,e_mail,new_password)) #create and save new credentials.
+                print('\n')
+                print(f"New Credentials {account_Name} {site_Name} {user_name} {e_mail} created and saved")
+                print('\n')
+                           
+            
+             
+                                
+if __name__ == '__main__':
+
+    main()                             
+
+                            
+                            
+                            
+                            
 
 
