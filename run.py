@@ -150,15 +150,38 @@ def main():
                 print(f"New Credentials {account_Name} {site_Name} {user_name} {e_mail} created and saved")
                 print('\n')
             
-            
-        
-                            
+                         
             else :
                 new_password = input()
                 save_credential(create_credentials(account_Name,site_Name,user_name,e_mail,new_password)) #create and save new credentials.
                 print('\n')
                 print(f"New Credentials {account_Name} {site_Name} {user_name} {e_mail} created and saved")
                 print('\n')
+                
+        
+        elif short_code == 'dy':
+            
+            if display_credential():
+                print("Here there is a list of all your credentials")
+                print('\n')
+                
+                for user in display_users():
+                    print(f"{credentials.account_Name} {credentials.site_Name} {credentials.user_name} {Credentials.e_mail} {credentials.password}")
+                    print('\n')
+            
+            else:
+                print('\n')
+                print("you do not seem to have any credentials saved yet")
+                print('\n')
+                
+                
+        elif short_code == 'ex':
+            print("Bye .......")
+            
+        else:
+            print("I didn`t get that. Please use the short codes")
+                
+
                            
             
              
