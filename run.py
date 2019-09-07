@@ -165,8 +165,8 @@ def main():
                 print("Here there is a list of all your credentials")
                 print('\n')
                 
-                for user in display_users():
-                    print(f"{credentials.account_Name} {credentials.site_Name} {credentials.user_name} {Credentials.e_mail} {credentials.password}")
+                for credentials in display_credential():
+                    print(f"{credentials.accountName} {credentials.siteName} {credentials.username} {Credentials.email} {credentials.password}")
                     print('\n')
             
             else:
@@ -181,14 +181,11 @@ def main():
         else:
             print("I didn`t get that. Please use the short codes")
                 
-
-                           
-            
-             
                                 
 if __name__ == '__main__':
+    
 
-    main()                             
+    main()                         
 
                             
                             
