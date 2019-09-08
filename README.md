@@ -50,3 +50,6 @@ the user will be able to see all the informations inputed after displaying them.
 5.Your project should contain a proper detailed README markdown file, with the full description of the project, setup instructions, dependencies, technologies used, authors, license information and contact information.
 6.Your project should have descriptive and properly outlined commits.
 7.Your project code should be pushed to Github with a description of the app provided in the Github Repository.
+
+## Technology used
+Python3.6 ,Visual Studio Code as text-Editor, Terminal
