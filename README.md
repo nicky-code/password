@@ -23,6 +23,8 @@ We want our application to:
 3. Display credentials.
 4. Delete credentials.
 5. Display user information.
+6. As a user, I would like to be able to copy my credentials to the clipboard.
+7. As a user, I would also like to dictate the length of the password I generate.
 
 ## Input Examples
 as a user will be able to log in :
