@@ -44,12 +44,13 @@ the user will be able to see all the informations inputed after displaying them.
 
 ## Setup/Installation Requirements
 1.Your project should have two classes, a User class and Credentials class.
-2.Your application should have an authentication system that enables a user to log into their account and view their credentials. A user should be able to login to their account using the password that they created and NOT any password.
-3.Your project should make use of docstrings to document methods and functions.
-4.Your project must have a test class that test each individual method in your classes.
-5.Your project should contain a proper detailed README markdown file, with the full description of the project, setup instructions, dependencies, technologies used, authors, license information and contact information.
-6.Your project should have descriptive and properly outlined commits.
-7.Your project code should be pushed to Github with a description of the app provided in the Github Repository.
+2.Your application should have an authentication system that enables a user to log into their account and view their credentials.
+3.A user should be able to login to their account using the password that they created and NOT any password.
+4.Your project should make use of docstrings to document methods and functions.
+5.Your project must have a test class that test each individual method in your classes.
+6.Your project should contain a proper detailed README markdown file, with the full description of the project, setup instructions, dependencies, technologies used, authors, license information and contact information.
+7.Your project should have descriptive and properly outlined commits.
+8.Your project code should be pushed to Github with a description of the app provided in the Github Repository.
 
 ## Technology used
 Python3.6 ,Visual Studio Code as text-Editor, Terminal
