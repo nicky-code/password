@@ -1,3 +1,5 @@
+import pyperclip
+
 class Credentials:
     """
     Class that generates new instances of credentials
@@ -70,6 +72,10 @@ class Credentials:
         
 
 
+    @classmethod
+    def copy_email(cls,email):
+        credentials_found = Credentials.find_by_email(email)
+        pyperclip.copy(credentials_found.email)
     
    
        
