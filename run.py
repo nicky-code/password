@@ -43,6 +43,7 @@ def del_credentials(credentials):
     Function to delete the credentials
     '''
     credentials.delete_credentials()
+    return True
 
 
 def find_user(email):
@@ -107,7 +108,6 @@ def main():
                             
             print("username ....")
             user_name = input()
-                            
             print("email ...")
             e_mail = input()
                             
@@ -166,18 +166,19 @@ def main():
                 print('\n')
                 
                 for credentials in display_credential():
-                    print(f"{credentials.accountName} {credentials.siteName} {credentials.username} {Credentials.email} {credentials.password}")
+                    print(f"{credentials.accountName} {credentials.siteName} {credentials.username} {credentials.email} {credentials.password}")
                     print('\n')
+        elif short_code == 'dl':
+        
+            for credentials in display_credential():
+                
             
-            else:
-                print('\n')
-                print("you do not seem to have any credentials saved yet")
-                print('\n')
-                
-                
+                if del_credentials(credentials):
+                    print("account has successfully deleted")
+    
         elif short_code == 'ex':
             print("Bye .......")
-            
+            break
         else:
             print("I didn`t get that. Please use the short codes")
                 
