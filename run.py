@@ -96,7 +96,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes: ct -create a new user account, ad - add the credentials , dy - display credentials, dl - delete credentials, ex - exit the password locker")
+        print("Use these short codes: ct -create a new user account, lg - login ad - add the credentials , dy - display credentials, dl - delete credentials, ex - exit the password locker")
                         
         short_code = input().lower()
                         
@@ -118,7 +118,25 @@ def main():
             print('\n')
             print(f"New User {user_name} {e_mail} created and saved")
             print('\n')
-                            
+
+
+        elif short_code == 'lg':
+            print("LOG IN")
+            print('-'*10)
+            print('\n')
+            print("please enter the created account")
+            email = input()
+
+            if check_existing_users(email):
+                searched_email = find_user(email)
+                print(f"{searched_email.username} {searched_email.email}")
+                print('-'*30)
+                print('\n')
+                print('Thank you for logging in')
+
+            else:
+                print('the email does not exist')
+
         elif short_code == 'ad':
             print("New Credentials")
             print("-"*10)
