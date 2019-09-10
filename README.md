@@ -42,6 +42,9 @@ then add the credentials as well, we will be able to sign in:
 ## Output Examples
 the user will be able to see all the informations inputed after displaying them.
 
+## TDD
+I test my project using Python3.6
+
 ## Setup/Installation Requirements
 1.Your project should have two classes, a User class and Credentials class.
 2.Your application should have an authentication system that enables a user to log into their account and view their credentials.
@@ -57,6 +60,6 @@ Python3.6 ,Visual Studio Code as text-Editor, Terminal
 
 ## My link repository
 
-
+## Contact me on aline.nicole7@gmail.com
 ## Title Licence
 Copyright(c)2019 Aline Nicole UWAMARIYA
