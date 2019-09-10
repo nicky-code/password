@@ -3,6 +3,7 @@ from user import User
 from credentials import Credentials
 import random
 import string
+import pyperclip
 
 def create_user(username,email,password):
     '''
@@ -84,6 +85,12 @@ def display_credential():
     '''
     return Credentials.display_credential()
 
+
+def copy_email(myEmail):
+    '''
+    '''
+    myEmail.copy_credentials(myEmail)
+
 def randomString(stringLength):
     """Generate a random string with the combination of lowercase and uppercase letters """
     letters = string.ascii_letters
@@ -96,7 +103,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes: ct -create a new user account, lg - login ad - add the credentials , dy - display credentials, dl - delete credentials, ex - exit the password locker")
+        print("Use these short codes: ct -create a new user account, lg - login ad - add the credentials , dy - display credentials, cp - copy the credentials, dl - delete credentials, ex - exit the password locker")
                         
         short_code = input().lower()
                         
@@ -186,6 +193,23 @@ def main():
                 for credentials in display_credential():
                     print(f"{credentials.accountName} {credentials.siteName} {credentials.username} {credentials.email} {credentials.password}")
                     print('\n')
+
+        elif short_code == 'cp':
+            print ('Copy the credentials')
+            print('-'*10)
+            print('\n')
+            print('enter email of the credentials you want to copy')
+            searched_email = input()
+            print(check_existing_credentials(searched_email))
+
+            if check_existing_credentials(searched_email):
+                searche_email = find_credentials(searched_email)
+                print(f"{searche_email.accountName} {searche_email.siteName} {searche_email.username}")
+                print('-'*10)
+                searche_email.copy_credentials(searched_email)
+                print('credentials copied')
+                print('\n')
+
         elif short_code == 'dl':
         
             for credentials in display_credential():
